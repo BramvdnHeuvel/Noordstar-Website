@@ -1,5 +1,8 @@
 from flask import Flask, render_template
 from src.routes import default
+import sys
+
+PRODUCTION = len(sys.argv) > 1
 
 app = Flask(__name__)
 
@@ -13,4 +16,8 @@ def give_example():
     return e
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    if not PRODUCTION:
+        app.run(debug=True)
+    else:
+        port = sys.argv[1]
+        app.run(host='0.0.0.0', port=port)
