@@ -1,0 +1,45 @@
+:root {
+    font-family: 'Roboto', sans-serif;
+
+    --card-preview-height: 300px;
+    --card-preview-gradient-height: 200px;
+
+    /* Certain specific colours */
+    --noordstar-blue: #427ff0;
+    --noordstar-blue-hover: #3667c2;
+    --noordstar-blue-active: #3059a7;
+
+    /* Set colours */
+    --color-blue: var(--noordstar-blue);
+    --color-blue-hover: var(--noordstar-blue-hover);
+    --color-blue-active: var(--noordstar-blue-active);
+    --color-yellow: #d2d024;
+    --color-yellow-hover: #b3b01e;
+    --color-yellow-active: #9c9a1a;
+    --color-green: #5ea493;
+    --color-green-hover: #549283;
+    --color-green-active: #497e70;
+    --color-red: #b00000;
+    --color-red-hover: #960000;
+    --color-red-active: #800000;
+    --color-black: #2c2c48;
+    --color-black-hover: #222238;
+    --color-black-active: #191929;
+    --color-white: #f2efea;
+    --color-white-hover: #ffffff;
+    --color-white-active: #ffffff;
+
+    /* Colour palette */
+    --color-one:            var(--color-blue);          /* Primary colour */
+    --color-one-hover:      var(--color-blue-hover);
+    --color-one-active:     var(--color-blue-active);
+    --color-two:            var(--color-yellow);        /* Secondary colour */
+    --color-two-hover:      var(--color-yellow-hover);
+    --color-two-active:     var(--color-yellow-active);
+    --color-three:          var(--color-green);         /* Tertiary colour */
+    --color-three-hover:    var(--color-green-hover);
+    --color-three-active:   var(--color-green-active);
+
+    /* TODO: Add Roboto font */
+    font-family: Roboto;
+}

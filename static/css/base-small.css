@@ -1,0 +1,29 @@
+/* Display the hamburger button when the screen is small */
+#navbar button {
+    display: block;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#navbar a {
+    text-align: left;
+}
+
+/* Only display the options when the hamburger button is activated */
+#navbar.closed > div:first-child a:not(:first-child) {
+    display: none;
+}
+
+/* Redesign the buttons when they're viewed */
+#navbar.open > div:first-child {
+    display: block;
+    width: 100%;
+}
+#navbar.open > div:first-child a:not(:first-child) {
+    width: 100%;
+    background-color: var(--color-one-hover);
+}
+#navbar.open > div:first-child a:not(:first-child):hover {
+    background-color: var(--color-one-active);
+}

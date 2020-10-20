@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {# FontAwesome #}
+    <link rel="stylesheet" type="text/css" href="/static/fontawesome-free-5.13.0-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" type="text/css" href="/static/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/base-small.css" media="screen and (max-width: 48em)">
+    <link rel="stylesheet" type="text/css" href="/static/css/card.css">
+
+    {% block meta %}{% endblock %}
+</head>
+<body>
+    <div id="navbar" class="closed">
+        <div>
+            <a href="{{ url_for('home') }}">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+            {% block navbar %}
+            {% endblock %}
+        </div>
+        <button type="button" onclick="openHamburger()">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div id="hidden-tags">
+        <script src="/static/js/base.js"></script>
+        {% block javascript %}{% endblock %}
+    </div>
+</body>
+</html>
